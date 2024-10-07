@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voila Steakhouse</title>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f1ebe1;
+            font-family: "Poppins", sans-serif;
+        }
+
+        header {
+            font-family: 'Acme', sans-serif;
+            text-align: center;
+            font-size: 40px;
+            padding: 20px;
+            background-color: #3e2c2b;
+            color: #f1ebe1;
+        }
+
+        .topnav {
+            background-color: #5a4a42;
+            overflow: hidden;
+            position: sticky;
+            top: 0;
+            z-index: 1000; 
+        }
+
+        .topnav a {
+            float: left;
+            color: #f1ebe1;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        .topnav a:hover {
+            color: #e3b23c;
+        }
+
+        .topnav a.active {
+            font-weight: bold;
+            color: #e3b23c;
+        }
+
+        .menu-item {
+            position: relative;
+            height: 100vh; /* Ensure the menu item takes the full height of the viewport */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Center items vertically */
+            align-items: center; /* Center items horizontally */
+            color: white;
+            text-align: center; /* Align text to center */
+            padding: 20px;
+        }
+
+
+        .menu-item.right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end; 
+            text-align: right; 
+            padding: 20px;
+        }
+
+        .menu-item.left {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+            padding: 20px; 
+        }
+
+
+        .menu-item.last {
+            align-items: flex-end; 
+            text-align: left; 
+            padding: 10px;
+        }
+
+        .menu-item::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5); 
+        }
+
+        .menu-item h3 {
+            font-size: 50px;
+            z-index: 1;
+            margin-top: 20vh;
+        }
+
+        .menu-item p {
+            font-size: 22px;
+            z-index: 1;
+            max-width: 600px;
+            margin-top: 20px;
+        }
+
+        .pricing-container {
+            padding: 30px; 
+            box-shadow: none; 
+            margin-top: 20px; 
+            width: 80%; 
+            max-width: 900px; 
+            text-align: center; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+        }
+
+        .pricing-item {
+            font-size: 30px; 
+            margin: 15px 0; 
+            display: flex; 
+            justify-content: space-between; 
+            width: 100%; 
+            padding: 5px 20px; 
+        }
+
+        .pricing-item strong {
+            color: whitesmoke; 
+            font-weight: bold; 
+        }
+
+        .pricing-item span {
+            color: #e3b23c; 
+            font-weight: bold; 
+            margin-left: 10px; 
+        }
+
+        footer {
+            background-color: #3e2c2b;
+            color: #f1ebe1;
+            padding: 20px;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .socials {
+            margin-top: 20px;
+        }
+
+        .socials a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #e3b23c; 
+            font-size: 18px;
+        }
+
+        .socials a:hover {
+            color: #f1ebe1;
+        }
+
+        .contact {
+            background-color: #3e2c2b;
+            color: #f1ebe1;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .contact p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .logos {
+            margin-top: 20px;
+        }
+
+        .logos img {
+            width: 40px; 
+            margin: 0 15px;
+        }
+
+        .logo {
+            width: 150px; 
+            margin: 20px auto; 
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Voila Steakhouse</h1>
+    </header>
+
+    <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+    </div>
+
+    <div class="menu-item left" style="background-image: url('steak1.jpg');" id="home">
+        <h3>Welcome to Voila Steakhouse!</h3>
+        <p>At Voila Steakhouse, we believe that every meal should be a memorable occasion. Located in the vibrant heart of Surabaya, our establishment is dedicated to providing you with an exceptional dining experience, featuring the finest cuts of beef and a selection of gourmet dishes prepared by our expert chefs.</p>
+        <p>Our commitment to quality ingredients guarantees that each steak is cooked to perfection, delivering a burst of flavor with every bite. Whether you choose our juicy Ribeye or our sumptuous Filet Mignon, we ensure that your dining experience is nothing short of extraordinary.</p>
+    </div>
+
+    <div class="menu-item right" style="background-image: url('steak3.jpg');" id="menu">
+        <div class="pricing-container">
+            <h3>Premium Steak</h3>
+            <div class="pricing-item">
+                <strong>Tenderloin Steak:</strong><span>$30.00</span> - A tender, melt-in-your-mouth cut, cooked to your preference.
+            </div>
+            <div class="pricing-item">
+                <strong>Striploin Steak:</strong><span>$28.00</span> - Seasoned with our special blend of herbs and spices.
+            </div>
+            <div class="pricing-item">
+                <strong>Ribeye Steak:</strong><span>$32.00</span> - Rich flavor, marbled to perfection and served with seasonal vegetables.
+            </div>
+            <div class="pricing-item">
+                <strong>Sirloin Steak:</strong><span>$25.00</span> - A classic cut, grilled to perfection and bursting with flavor.
+            </div>
+        </div>
+    </div>
+
+    <div class="menu-item left" style="background-image: url('steak2.jpg');" id="menu2">
+        <div class="pricing-container">
+            <h3>Australian Wagyu</h3>
+            <div class="pricing-item">
+                <strong>MB5:</strong><span>$75.00</span> - A well-marbled steak offering a rich flavor and tenderness.
+            </div>
+            <div class="pricing-item">
+                <strong>MB7:</strong><span>$90.00</span> - An exceptional cut with more intense marbling for enhanced taste.
+            </div>
+            <div class="pricing-item">
+                <strong>MB8:</strong><span>$110.00</span> - Premium marbling with a buttery texture and exquisite flavor.
+            </div>
+            <div class="pricing-item">
+                <strong>MB9:</strong><span>$130.00</span> - The pinnacle of marbling, providing an unrivaled taste experience.
+            </div>
+        </div>
+    </div>
+
+    <div class="menu-item last" style="background-image: url('pasta.jpg');" id="pasta">
+        <div class="pricing-container">
+            <div class="pricing-item">
+                <strong>Fettuccine Alfredo:</strong><span>$14.00</span> - A rich and creamy pasta dish, perfect for cheese lovers.
+            </div>
+            <div class="pricing-item">
+                <strong>Penne Arrabbiata:</strong><span>$12.00</span> - Spicy tomato sauce with garlic and chili, served with penne pasta.
+            </div>
+            <div class="pricing-item">
+                <strong>Lasagna:</strong><span>$18.00</span> - Layers of pasta, meat, and cheese, baked to perfection.
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <p>We would love to hear from you! Feel free to reach out via our social media platforms.</p>
+        <div class="socials logos">
+            <a href="https://www.instagram.com" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/your-whatsapp-number" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.tiktok.com" target="_blank">
+                <i class="fab fa-tiktok"></i>
+            </a>
+        </div>
+    </div>
+
+    <!--Smooth scrolling with js-->
+    <script>
+        document.querySelectorAll('.topnav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+
+
+    <footer>
+        <p>&copy; 2024 Voila Steakhouse. All rights reserved.</p>
+    </footer>
+</body>
+</html>
